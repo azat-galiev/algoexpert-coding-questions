@@ -46,6 +46,11 @@ namespace CodingQuestions.EasyQuestions
             return result.ToString();
         }
 
+        protected override bool CompareActualAndExpectedOuputs(string expected, string actual)
+        {
+            return expected.Equals(actual);
+        }
+
         protected override IReadOnlyDictionary<string, string> GetTests()
         {
             return new Dictionary<string, string>

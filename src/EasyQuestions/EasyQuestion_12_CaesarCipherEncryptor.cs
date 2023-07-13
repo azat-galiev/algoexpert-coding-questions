@@ -36,6 +36,10 @@ namespace CodingQuestions.EasyQuestions
 
             return result.ToString();
         }
+        protected override bool CompareActualAndExpectedOuputs(string expected, string actual)
+        {
+            return expected.Equals(actual);
+        }
 
         protected override IReadOnlyDictionary<EasyQuestion_12_CaesarCipherEncryptor_Input, string> GetTests()
         {

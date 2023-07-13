@@ -9,6 +9,8 @@
     {
         protected abstract TOutput ExecuteSolution(TInput input);
 
+        protected abstract bool CompareActualAndExpectedOuputs(TOutput expected, TOutput actual);
+
         protected abstract IReadOnlyDictionary<TInput, TOutput> GetTests();
 
         public void Run()
@@ -22,13 +24,13 @@
                 Console.Write($"Test Case #{i++}: ");
 
                 var actualOutput = ExecuteSolution(input)!;
-                if (actualOutput.Equals(expectedOutput))
+                if (CompareActualAndExpectedOuputs(expectedOutput, actualOutput))
                 {
                     Console.WriteLine("Passed");
                 }
                 else
                 {
-                    Console.WriteLine($"Failed. Expected: {expectedOutput}, Actual: {actualOutput}");
+                    Console.WriteLine("Failed");
                 }
             }
         }
