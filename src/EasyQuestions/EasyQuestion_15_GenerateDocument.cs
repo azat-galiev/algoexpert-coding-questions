@@ -7,7 +7,7 @@
         public required string Document { get; set; }
     }
 
-    /// <see cref="https://www.algoexpert.io/questions/generate-document"/>
+    /// <see href="https://www.algoexpert.io/questions/generate-document"/>
     /// Time: O(n) where n is the number of characters in Characters
     /// Space: O(n)
     internal class EasyQuestion_15_GenerateDocument : CodingQuestion<EasyQuestion_15_GenerateDocument_Input, bool>

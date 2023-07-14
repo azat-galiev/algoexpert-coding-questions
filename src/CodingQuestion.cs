@@ -15,6 +15,8 @@
 
         public void Run()
         {
+            Console.WriteLine($"Coding question: {GetType().Name}");
+
             var i = 1;
             foreach (var test in GetTests())
             {

@@ -1,6 +1,6 @@
 ﻿namespace CodingQuestions.EasyQuestions
 {
-    /// <see cref="https://www.algoexpert.io/questions/common-characters"/>
+    /// <see href="https://www.algoexpert.io/questions/common-characters"/>
     /// Time: O(n * m) where n is the number of strings, and m is the length of the longest string
     /// Space: O(m)
     internal class EasyQuestion_14_CommonCharacters : CodingQuestion<List<string>, List<char>>
