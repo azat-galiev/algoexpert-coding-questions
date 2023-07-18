@@ -64,8 +64,8 @@
         public class BST
         {
             public int value;
-            public BST left;
-            public BST right;
+            public BST? left;
+            public BST? right;
 
             public BST(int value)
             {
@@ -75,7 +75,7 @@
 
         internal class Input
         {
-            public BST Tree { get; set; }
+            public required BST Tree { get; set; }
             public int Target { get; set; }
         }
     }
