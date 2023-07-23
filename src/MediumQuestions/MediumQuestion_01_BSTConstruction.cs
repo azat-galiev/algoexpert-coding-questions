@@ -2,11 +2,12 @@
 
 namespace CodingQuestions.MediumQuestions
 {
+    /// <see href="https://www.algoexpert.io/questions/bst-construction"/>
+    /// Actual implementation is in the <see cref="BST"/> class.
     internal class MediumQuestion_01_BSTConstruction : CodingQuestion<MediumQuestion_01_BSTConstruction.Input, BST>
     {
         protected override BST ExecuteSolution(Input input)
         {
-            /// Actual implementation is in the <see cref="BST"/> class.
             return input.Action(input.BST);
         }
 

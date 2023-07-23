@@ -15,7 +15,8 @@
 
         public void Run()
         {
-            Console.WriteLine($"Coding question: {GetType().Name}");
+            Console.WriteLine();
+            Console.WriteLine(GetType().Name);
 
             var i = 1;
             foreach (var test in GetTests())
@@ -23,17 +24,21 @@
                 var input = test.Key;
                 var expectedOutput = test.Value;
 
-                Console.Write($"Test Case #{i++}: ");
+                Console.Write($"\tTest Case #{i++}: ");
 
                 var actualOutput = ExecuteSolution(input)!;
                 if (CompareActualAndExpectedOuputs(expectedOutput, actualOutput))
                 {
+                    Console.ForegroundColor = ConsoleColor.Green;
                     Console.WriteLine("Passed");
                 }
                 else
                 {
+                    Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("Failed");
                 }
+
+                Console.ForegroundColor = ConsoleColor.Gray;
             }
         }
     }

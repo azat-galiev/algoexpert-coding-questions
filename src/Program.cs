@@ -1,10 +1,11 @@
-﻿
-using CodingQuestions;
+﻿using CodingQuestions;
 using System.Reflection;
 
-var lastQuestionType = Assembly.GetExecutingAssembly().GetTypes()
-    .Where(x => x.GetInterface(nameof(ICodingQuestion)) != null)
-    .OrderBy(x => x.Name)
-    .Last();
-var lastQuestion = (ICodingQuestion)Activator.CreateInstance(lastQuestionType)!;
-lastQuestion.Run();
+var questionTypes = Assembly.GetExecutingAssembly().GetTypes()
+    .Where(x => x.GetInterface(nameof(ICodingQuestion)) != null && !x.ContainsGenericParameters)
+    .OrderBy(x => x.Name);
+foreach (var questionType in questionTypes)
+{
+    var question = (ICodingQuestion)Activator.CreateInstance(questionType)!;
+    question.Run();
+}
