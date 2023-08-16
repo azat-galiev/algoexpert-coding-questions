@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace CodingQuestions.MediumQuestions
+﻿namespace CodingQuestions.MediumQuestions
 {
     /// <see href="https://www.algoexpert.io/questions/number-of-ways-to-traverse-graph"/>
     /// Time: O(w + h) where w is the width of the graph, h is the height of the graph
